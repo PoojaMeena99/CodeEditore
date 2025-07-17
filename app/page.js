@@ -145,6 +145,22 @@ const getDefaultCode = (language) => {
 
 export default Page;
 
+
+
+
+
+
+
+
+
+
+
+
+
+// This is my Old Code
+
+
+
 // "use client";
 
 // import React, { useState } from "react";
