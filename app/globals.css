@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.main-app {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.question-box {
+  flex: 1;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.action-row {
+  border: 2px solid #ccc;
+  padding: 10px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.code-editor-box {
+  flex: 1;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.inputOutputBox {
+  display: flex;
+}
+
+.code-editor-container {
+  height: 500px;
+}
+
+.code-editor-box h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.input-output-box h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}

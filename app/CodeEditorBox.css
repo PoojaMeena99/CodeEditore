@@ -1,0 +1,51 @@
+.cm-editor {
+  height: 500px;
+  font-size: 14px;
+  font-family: 'Fira Code', monospace;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #444;
+}
+
+.cm-content {
+  caret-color: #528bff;
+  padding: 10px 0;
+}
+
+.cm-gutters {
+  background-color: #282c34;
+  color: #ddd;
+  border-right: 1px solid #444;
+}
+
+.cm-selectionBackground {
+  background-color: rgba(100, 100, 255, 0.2);
+}
+
+.cm-cursor {
+  border-left: 2px solid #528bff;
+}
+
+.cm-focused {
+  outline: none;
+}
+
+.code-editor-wrapper {
+  max-height: 500px;
+  height: 500px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #444; 
+  margin-bottom: 30px;
+}
+
+.editor {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-height: 200px;
+  font-size: 14px;
+  background-color: #282c34;
+  font-family: Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+}
