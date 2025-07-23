@@ -7,18 +7,22 @@ const DOMjudgeAPI = {
 
       // Prepare form data
       const formData = new FormData();
-      formData.append("code", file);
-      formData.append("language", "python3");
-      formData.append("problem", "1");
+      //formData.append("code", file);
+      formData.append("language", language);
+      formData.append("problem", "36");
+
+      const username = "pooja";
+      const password = "Pooja@12345";
+      const token = btoa(`${username}:${password}`);
 
       // API call
       const response = await fetch(
-        "https://test1.indiaicpc.in/api/v4/contests/1/submissions",
+        "/api/proxy/contests/1/submissions",
         {
           method: "POST",
           headers: {
             Accept: "application/json",
-            Authorization: "Basic cG9vamE6cG9vamFAanVzdHVqdS5pbg==",
+            Authorization: `Basic ${token}`,
           },
           body: formData,
         }
@@ -42,7 +46,7 @@ const DOMjudgeAPI = {
         message: `Error: ${error.message}`,
       };
     }
-  },
+  }
 
   // Get result function
   // getResult: async (submissionId) => {
@@ -78,3 +82,66 @@ const DOMjudgeAPI = {
 };
 
 export default DOMjudgeAPI;
+
+
+
+
+
+
+
+
+
+
+// const DOMjudgeAPI = {
+//   submitCode: async (code, language) => {
+//     try {
+//       // Create a file blob from code
+//       const blob = new Blob([code], { type: "text/plain" });
+//       const file = new File([blob], "solution.py", { type: "text/plain" });
+
+//       // 🔸 Prepare form data
+//       const formData = new FormData();
+//       formData.append("code", file);
+//       formData.append("language", language);
+//       formData.append("problem", "39"); 
+
+//       // Prepare form data
+//       const username = "pooja";
+//       const password = "Pooja@12345";
+//       const token = btoa(`${username}:${password}`);
+
+  
+//       const response = await fetch(
+//         "api/v4/contests/1/submissions",
+
+//         {
+//           method: "POST",
+//           headers: {
+//             Authorization: `Basic ${token}`,
+//             Accept: "application/json",
+//           },
+//           body: formData,
+//         }
+//       );
+
+//       if (!response.ok) {
+//         throw new Error(`HTTP error! status: ${response.status}`);
+//       }
+
+//       const result = await response.json();
+//       return {
+//         success: true,
+//         data: result,
+//         message: `Submission successful! ID: ${result.id}`,
+//       };
+//     } catch (error) {
+//       return {
+//         success: false,
+//         message: `Error: ${error.message}`,
+//       };
+//     }
+//   },
+// };
+
+// export default DOMjudgeAPI;
+
