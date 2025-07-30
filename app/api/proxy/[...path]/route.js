@@ -15,16 +15,21 @@ export async function POST(req, { params }) {
   const dynamicPath = path.join('/');
   const targetUrl = `https://test1.indiaicpc.in/api/v4/${dynamicPath}`;
 
-  const response = await fetch(targetUrl, {
-    method: "POST",
-    headers: {
-      'Authorization': req.headers.get("authorization") || '',
-    },
-    body: req.body,
+  const headers = {};
+  req.headers.forEach((value, key) => {
+    headers[key] = value;
   });
 
-  return new Response(await response.text(), {
+  const response = await fetch(targetUrl, {
+    method: "POST",
+    headers,
+    body: req.body,
+    duplex: 'half'
+  });
+
+  const responseHeaders = new Headers(response.headers);
+  return new Response(response.body, {
     status: response.status,
-    headers: { 'Content-Type': 'application/json' },
+    headers: responseHeaders,
   });
 }

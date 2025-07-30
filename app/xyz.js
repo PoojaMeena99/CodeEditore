@@ -7,8 +7,8 @@ const DOMjudgeAPI = {
 
       // Prepare form data
       const formData = new FormData();
-      //formData.append("code", file);
-      formData.append("language", language);
+      formData.append("code", file);
+      formData.append("language", "python3");
       formData.append("problem", "36");
 
       const username = "pooja";
