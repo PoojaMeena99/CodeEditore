@@ -12,6 +12,12 @@ body {
   border-radius: 8px;
 }
 
+.top-row {
+  border: 2px solid #ccc;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
 .row {
   display: flex;
   gap: 16px;
@@ -61,4 +67,64 @@ body {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 8px;
+}
+
+
+/* This is Front page of CSS */
+
+
+.table-container {
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  width: 80%;
+  margin: auto;
+}
+
+.table-container h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.problems-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.problems-table th,
+.problems-table td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 18px;
+  padding: 20px;
+
+}
+
+.problems-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.problems-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.problems-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.problems-table a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+.problems-table a:hover {
+  text-decoration: underline;
+}
+
+.clickable-row {
+  transition: background 0.2s ease;
 }

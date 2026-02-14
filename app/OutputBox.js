@@ -12,3 +12,8 @@ const OutputBox = ({ content }) => {
 };
 
 export default OutputBox;
+
+
+
+
+

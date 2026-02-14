@@ -26,6 +26,7 @@
     "nvm": "^0.0.4",
     "pdfjs-dist": "^3.9.179",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-syntax-highlighter": "^15.6.6"
   }
 }

@@ -15,8 +15,9 @@ const LanguageDropdown = ({ value, onChange }) => {
       >
         <option value="JavaScript">JavaScript</option>
         <option value="Python">Python</option>
-        <option value="HTML">HTML</option>
-        <option value="CSS">CSS</option>
+        <option value="Java">Java</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
       </select>
     </div>
   );
